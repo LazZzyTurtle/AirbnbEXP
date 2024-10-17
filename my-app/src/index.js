@@ -1,29 +1,38 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+
 import './index.css'
 
 function Header() {
-  return (
+  return(
     <header>
-      <nav>
-        <img src="./react-logo.png" alt='react-logo' width="40px"/>
+      <nav className="nav">
+        <img src="./react-logo.png" alt="react-logo" className="nav-logo"/>
+        <ul className="pages">
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
       </nav>
     </header>
   )
 }
 
 function Footer() {
-  return (
-    <footer>
-      <small>@ 2024 Nima development. All right reserved.</small>
+  return(
+    <footer className="footer">
+      <small className="footer-text">
+        @ 2024 Nima development. All right reserved.
+      </small>
     </footer>
   )
 }
 
-function MainContent () {
+
+function MainContent() {
   return (
-    <div>
-      <h1>Fun facts about React</h1>
+    <div className="main-content">
+      <h1>Fun fact abou React</h1>
       <ul>
         <li>Was first released in 2013</li>
         <li>Was originally created by Jordan Walke</li>
@@ -31,12 +40,14 @@ function MainContent () {
         <li>Is maintained by Meta</li>
         <li>Powers thousands of enterprise apps, including mobile apps</li>
       </ul>
-    </div>
+    </div>    
   )
 }
+
+
 function Page() {
   return (
-    <div>
+    <div className = "page">
       <Header />
       <MainContent />
       <Footer />
@@ -45,6 +56,6 @@ function Page() {
 }
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById("root"))
 
 root.render(<Page />)
